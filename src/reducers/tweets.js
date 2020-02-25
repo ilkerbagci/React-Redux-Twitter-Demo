@@ -1,4 +1,4 @@
-import { RECEIVE_TWEETS } from "../actions/tweets";
+import { RECEIVE_TWEETS } from '../actions/tweets'
 
 export default function tweets(state = {}, action) {
     switch (action.type) {
@@ -6,8 +6,8 @@ export default function tweets(state = {}, action) {
             return {
                 ...state,
                 ...action.tweets,
-            };
+            }
         default:
-            return state;
+            return state
     }
 } 
