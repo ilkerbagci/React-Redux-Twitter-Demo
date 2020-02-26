@@ -17,7 +17,7 @@ export default function tweets(state = {}, action) {
                         : state[action.id].likes.concat([action.authedUser])
                 }
             }
-        case ADD_TWEET :
+        case ADD_TWEET:
             const { tweet } = action
 
             let replyingTo = {}
@@ -30,11 +30,11 @@ export default function tweets(state = {}, action) {
                 }
             }
 
-        return {
-            ...state,
-            [action.tweet.id]: action.tweet,
-            ...replyingTo,
-        }
+            return {
+                ...state,
+                [action.tweet.id]: action.tweet,
+                ...replyingTo,
+            }
         default:
             return state
     }

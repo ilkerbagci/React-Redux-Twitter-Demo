@@ -22,7 +22,7 @@ class NewTweet extends Component {
 
         e.preventDefault()
 
-        const { text} = this.state
+        const { text } = this.state
 
         const { dispatch, id } = this.props
 
@@ -52,16 +52,16 @@ class NewTweet extends Component {
                         value={text}
                         onChange={(event) => this.handleChange(event)}
                         className='textarea'
-                        maxLength={280}   
+                        maxLength={280}
                     />
                     {tweetLeft <= 100 && (
                         <div className='tweet-length'>
                             {tweetLeft}
                         </div>
                     )}
-                    <button 
-                        className='btn' 
-                        type='submit' 
+                    <button
+                        className='btn'
+                        type='submit'
                         disabled={text === ''}>
                         Submit
                     </button>
